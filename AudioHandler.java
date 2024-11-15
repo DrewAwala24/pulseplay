@@ -9,6 +9,7 @@ public class AudioHandler {
     private String currentFile;
     private long currentFrame; // To keep track of the current position
     private boolean isPaused; // To track if the audio is paused
+    private Thread playThread;// To manage playback threads
 
     public void loadAudio(String filePath) throws IOException {
         if (player != null) {
